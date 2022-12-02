@@ -82,6 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: JuicyUrl_production
-  username: JuicyUrl
-  password: <%= ENV["JUICYURL_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
