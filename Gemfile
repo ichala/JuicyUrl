@@ -48,7 +48,6 @@ gem 'bootsnap', require: false
 # Install Faker to generate fake data
 gem 'faker'
 
-gem 'ffi'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -61,6 +60,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
   gem 'rswag'
+  gem 'ffi'
 end
 
 group :development do
