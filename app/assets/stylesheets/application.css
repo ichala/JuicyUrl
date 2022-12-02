@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+ 
+ body {
+    background: #f1f5f9!important;
+    min-height: 100vh;
+ }
+
+
+ .background-main {
+    background: rgb(24,61,113);
+    background: linear-gradient(191deg, rgba(24,61,113,1) 0%, rgba(33,42,55,1) 100%);
+ }
+.details {
+   max-height: 100% !important;
+}
+
+ .container{
+    margin-top: -120px;
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+ }
+
+ .nav-background {
+    min-height: 250px;
+    background: rgb(24,61,113);
+    background: linear-gradient(191deg, rgba(24,61,113,1) 0%, rgba(33,42,55,1) 100%);
+ }
