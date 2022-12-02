@@ -1,7 +1,7 @@
-<div class="d-flex  min-vh-100 ">
-  <div class="col-5  text-white d-none d-md-flex flex-column background-main  justify-content-center align-items-center text-center">
+<div class="d-flex flex-column flex-md-row  min-vh-100 ">
+  <div class="col-12 col-md-5  text-white d-flex flex-column background-main justify-content-center align-items-center text-center">
     <h1 class="display-2">Already have an account ?</h1>
-    <%= link_to "Login", new_session_path(resource_name) ,:class => "btn btn-info w-50 text-white mt-2 "%>
+    <%= link_to "Login", new_session_path(resource_name) ,:class => "btn btn-info w-50 text-white m-2 "%>
   </div>
   <div class="col-12 col-md-7 d-flex flex-column justify-content-center justify-items-center text-center">
     <p class="display-3" href="#"><i class="fa-solid fa-link fa-xs"></i> JuicyUrl <i class="fa-solid fa-link fa-xs"></i></p>
@@ -32,3 +32,6 @@
         <%= f.submit "Sign up" ,:class => "btn background-main text-white mt-2 " %>
       </div>
     <% end %>
+  </div>
+</div>
+
