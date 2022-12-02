@@ -6,10 +6,9 @@ class LinksController < ApplicationController
   end
 
   def details
-   
     if current_user.urls.exists?(params[:id])
       @link = current_user.urls.find(params[:id])
-      @visits = @link.visits.group("DATE(created_at)").count
+      @visits = @link.visits.group('DATE(created_at)').count
       p @visits
 
     else
