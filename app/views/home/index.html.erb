@@ -1,2 +1,37 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div data-controller="home" class="container bg-white rounded shadow p-3">
+
+<%=  form_with(
+    class: "d-flex justify-content-center flex-column",
+             model: @url,
+             data: {
+                  target: "home.form",
+                  action: "home#submitForm"
+              }
+             ) do |f| %>
+                 <div class="mb-3 input-group">
+             <span class="input-group-text">Paste your link </span>
+<%= f.text_field :url ,  {:class=>'form-control',:placeholder=>"Https://..."} %>
+  </div>
+     <div class="mb-1 input-group">
+     <div class="input-group-text">
+  <%= f.check_box :custom,{:class=>"form-check-input"} %>
+    </div>
+  <%= f.text_field :alias ,  {:class=>'form-control',:placeholder=>"Custom alias",:disabled => 'true'} %>
+  </div>
+   <div id="aliasHelp" class="form-text d-none">
+      Custom alias should be max 16 characteres
+    </div>
+  <%= f.submit "Generate" ,:class=>'btn btn-primary mt-2'  %>
+<% end %>
+    <% if info %>
+         <p  class="alert alert-success mt-3" role="alert">Done ! 
+           <%= link_to  sanitize(info),sanitize(info) ,  {:target=>'_blank'}%>
+         </p> 
+         
+    <% end %>
+        <% if alert %>
+          <p  class="alert alert-danger mt-3" role="alert">Oops!
+          <%=  alert.each{ |e| puts "#{e}" } %>
+         </p> 
+    <% end %>
+</div>

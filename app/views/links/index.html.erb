@@ -1,0 +1,40 @@
+<div class="container bg-white rounded shadow p-3">
+   <% if alert %>
+          <p  class="alert alert-danger m-3" role="alert">Oops!
+          <%=  alert %>
+         </p> 
+    <% end %>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Alias</th>
+      <th scope="col">Original</th>
+      <th scope="col">Visitis</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% if @links.length === 0 %>
+    <th scope="row" colspan="5"> You Have No Links </th>
+  <% end %>
+
+  <% @links.each do |link| %>
+     <tr>
+      <th scope="row"> <%= link.id %></th>
+      <td> <%= link_to link.alias, "http://localhost:3000/#{link.alias}", {:target => '_blank'} %>
+</td>
+      <td> <%= link.original_link %></td>
+      <td> <%= link.visits_count %></td>
+      <td> <%= link_to  "More Details", link_details_url(link.id), {:target => '_blank', :class => 'btn btn-success'} %> </td>
+    </tr>
+   
+<% end %>
+   
+  </tbody>
+</table>
+
+
+
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alias: MyText
+  original_link: MyText
+  visits: 1
+
+two:
+  alias: MyText
+  original_link: MyText
+  visits: 1

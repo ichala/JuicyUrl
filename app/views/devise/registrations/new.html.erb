@@ -1,0 +1,42 @@
+<div class="d-flex  min-vh-100 ">
+  <div class="col-5  text-white d-none d-md-flex flex-column background-main  justify-content-center align-items-center text-center">
+    <h1 class="display-2">Already have an account ?</h1>
+     <%= link_to "Login", new_session_path(resource_name) ,:class => "btn btn-info w-50 text-white mt-2 "%>
+
+  </div>
+    <div class="col-12 col-md-7 d-flex flex-column justify-content-center justify-items-center text-center">
+
+    <p class="display-3" href="#"><i class="fa-solid fa-link fa-xs"></i> JuicyUrl <i class="fa-solid fa-link fa-xs"></i></p>
+    <% if notice %>
+         <p  class="alert alert-danger" role="alert"><%= notice %></p> 
+    <% end %>
+        <% if alert %>
+          <p class="alert alert-danger" role="alert"><%= alert %></p> 
+    <% end %>
+<%= form_for(resource, :html => {:class => 'p-5',"data-turbo" => "false"}, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,:class => "form-control form-control-lg"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" ,:class => "form-control form-control-lg" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password"  ,:class => "form-control form-control-lg"%>
+  </div>
+
+  <div class="actions">
+      <%= f.submit "Sign up" ,:class => "btn background-main text-white mt-2 " %>
+
+  </div>
+<% end %>
+
