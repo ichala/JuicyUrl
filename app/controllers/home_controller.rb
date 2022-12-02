@@ -21,7 +21,7 @@ class HomeController < ApplicationController
     @generate = current_user.urls.new(alias: link_alias, original_link: params[:url])
     if @generate.save
       # If the model saves, redirect to the index action
-      redirect_to root_path, info: "http://localhost:3000/#{@generate.alias}"
+      redirect_to root_path, info: "https://www.url.chala.dev/#{@generate.alias}"
     else
       # Otherwise render the erros
       redirect_to root_path, alert: @generate.errors.full_messages

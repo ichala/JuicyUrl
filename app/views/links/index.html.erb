@@ -21,7 +21,7 @@
       <% @links.each do |link| %>
         <tr>
           <th scope="row"> <%= link.id %></th>
-          <td> <%= link_to link.alias, "http://localhost:3000/#{link.alias}", {:target => '_blank'} %>
+          <td> <%= link_to link.alias, "https://juicyurl.onrender.com/#{link.alias}", {:target => '_blank'} %>
           </td>
           <td> <%= link.original_link %></td>
           <td> <%= link.visits_count %></td>
