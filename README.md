@@ -1,24 +1,56 @@
-# README
+<p align='center'>
+<img alt="GitHub forks" src="https://img.shields.io/badge/Open-Source-green">
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# JuicyUrl
 
-Things you may want to cover:
+> JucyUrl is A URL shortener service creates a short url/tiny url against a long url.Moreover, when user click on the tiny url, you gets redirected to original url.
 
-* Ruby version
 
-* System dependencies
+![MOCK](https://user-images.githubusercontent.com/89282221/205357253-1771755f-5a23-44ac-ab4d-9341195dddd2.jpg)
 
-* Configuration
 
-* Database creation
+## Table of Contents 
 
-* Database initialization
+* [Installation](#installation)
+* [Tools](#tools)
+* [Live Demo & Screenshots](#live-demo)
+* [Authors](#authors)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Installation
+- git clone https://github.com/ichala/JuicyUrl.git
+- cd web-phone
+- bundle install
+- create .env based on .env.example & Add necessary credentials 
+- rails db:setup db:migrate db:seed
+- rails s
 
-* Deployment instructions
+## Tools
 
-* ...
+- Ruby On Rails v7.0
+- Boostrap v5.0
+- Postgres 
+
+## Live Demo
+
+[JuicyUrl Live Demo](https://www.url.chala.dev/)
+
+## Authors
+
+👤 **Ali Jendoubi**
+
+- GitHub: [@ichala](https://github.com/ichala)
+- Twitter: [@_ichala](https://twitter.com/_ichala)
+- LinkedIn: [@alijendoubi](https://www.linkedin.com/in/alijendoubi/)
+
+
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## 📝 License
+
+This project is MIT licensed.
